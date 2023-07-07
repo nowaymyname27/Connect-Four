@@ -79,25 +79,6 @@ class RandomPlayer(Player):
 
 
 
-def test():
-    p = RandomPlayer('X')
-    print(p)
-    p.opponent_checker()
-    b = Board(2, 4)
-    b.add_checkers('001223')
-    print(b)
-    print(p.next_move(b))
-    print(p.next_move(b))
-    print(p.next_move(b))
-    b.add_checker('O', 1)
-    print(b)
-    print(p.next_move(b))
-    print(p.next_move(b))
-    b.add_checker('X', 3)
-    print(b)
-    b.remove_checker(2)
-    print(b)
-    
     
     
     

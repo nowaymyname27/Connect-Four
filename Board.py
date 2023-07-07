@@ -156,15 +156,3 @@ class Board:
 
     
     
-def test():
-    b = Board(6, 7)
-    b.add_checkers('0010203')
-    print(b)
-    print(b.is_win_for('X'))
-    print(b.is_win_for('O'))
-    
-    b2 = Board(6, 7)
-    b2.add_checkers('23344545515')
-    print(b2)
-    print(b2.is_win_for('X'))
-    print(b2.is_win_for('O'))

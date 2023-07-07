@@ -49,9 +49,5 @@ class Player:
         
         
     
-def test():
-    
-    p = Player('X')
-    b1 = Board(6, 7)
-    p.next_move(b1)
+
     
