@@ -88,12 +88,50 @@ class AIPlayer(Player):
         
         return best_move
 
-
 def play_game(tiebreaker, lookahead):
+    """
+    Initializes and plays a connect four game between a human player and an AI player.
+
+    Args:
+        tiebreaker (str): The tiebreaking strategy for the AI player. Should be 'LEFT', 'RIGHT', or 'RANDOM'.
+        lookahead (int): The number of moves the AI player should look ahead. Should be a non-negative integer.
+
+    Returns:
+        None
+    """
     p1 = Player('X')
     p2 = AIPlayer('O', tiebreaker, lookahead)
 
     connect_four(p1, p2)
 
+def play_game2(lookahead):
+    """
+    Initializes and plays a connect four game between a human player and an AI player. 
+    In this version, the AI player uses a fixed 'LEFT' tiebreaking strategy.
 
+    Args:
+        lookahead (int): The number of moves the AI player should look ahead. Should be a non-negative integer.
 
+    Returns:
+        None
+    """
+    p1 = Player('X')
+    p2 = AIPlayer('O', 'LEFT', lookahead)
+
+    connect_four(p1, p2)
+
+def play_game3():
+    """
+    Initializes and plays a connect four game between a human player and an AI player. 
+    In this version, the AI player uses a fixed 'LEFT' tiebreaking strategy and a fixed lookahead of 4 moves.
+
+    Args:
+        None
+
+    Returns:
+        None
+    """
+    p1 = Player('X')
+    p2 = AIPlayer('O', 'LEFT', 4)
+
+    connect_four(p1, p2)
