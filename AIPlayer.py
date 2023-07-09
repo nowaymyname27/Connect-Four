@@ -89,9 +89,9 @@ class AIPlayer(Player):
         return best_move
 
 
-def play_game(lookahead):
+def play_game(tiebreaker, lookahead):
     p1 = Player('X')
-    p2 = AIPlayer('O', 'LEFT', lookahead)
+    p2 = AIPlayer('O', tiebreaker, lookahead)
 
     connect_four(p1, p2)
 
